@@ -1,0 +1,22 @@
+{# This file extends from the base template, base.html #}
+{% extends "base.html" %}
+
+{# Define the title block, which will be used in the HTML title tag #}
+{% block title %}Secrets{% endblock %}
+
+{# Define the content block, which will be inserted into the base.html template #}
+{% block content %}
+    {# Using Bootstrap classes for styling here #}
+    <div class="jumbotron">
+        <div class="container">
+            {# Display a heading for the page #}
+            <h1>Welcome</h1>
+
+            {# Display a paragraph inviting the user to discover a secret #}
+            <p>Are you ready to discover my secret?</p>
+
+            {# Create a button that links to the login page using url_for to generate the URL #}
+            <a class="btn btn-primary btn-lg" href="{{ url_for('login') }}">Login</a>
+        </div>
+    </div>
+{% endblock %}

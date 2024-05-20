@@ -1,0 +1,20 @@
+{# This file extends from the base template, base.html #}
+{% extends "base.html" %}
+
+{# Import the render_form function from the Bootstrap 5 form template #}
+{% from 'bootstrap5/form.html' import render_form %}
+
+{# Define the title block, which will be used in the HTML title tag #}
+{% block title %}Login{% endblock %}
+
+{# Define the content block, which will be inserted into the base.html template #}
+{% block content %}
+    <div class="container">
+        {# Display a heading for the page #}
+        <h1>Login</h1>
+
+        {# Render the form passed to the template using the render_form function from Bootstrap 5 #}
+        {{ render_form(form) }}
+    </div>
+{% endblock %}
+

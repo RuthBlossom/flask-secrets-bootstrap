@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    {# Block for additional styles and loading Bootstrap CSS #}
+    {% block styles %}
+        <!-- Bootstrap CSS -->
+        {{ bootstrap.load_css() }}
+    {% endblock %}
+
+    {# Block for the page title #}
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    {# Block for the main content of the page #}
+    {% block content %}{% endblock %}
+
+</body>
+</html>
